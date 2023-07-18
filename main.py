@@ -1,4 +1,5 @@
 import streamlit as st
+import plotly.express as px
 
 
 def handle_city_change():
@@ -19,4 +20,8 @@ if st.session_state["city"]:
         f'in {st.session_state["city"]}'
     )
 
-    st.bar_chart()
+    dates = ['2023-08-01', '2023-08-02', '2023-08-03']
+    temperatures = [13, 15, 20]
+
+    fig = px.line(x=dates, y=temperatures, labels={'x': 'Dates', 'y': 'Temperatures (C)'})
+    st.plotly_chart(fig)
