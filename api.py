@@ -1,7 +1,7 @@
 from requests import get, HTTPError
 
 # openweathermap API_KEY has to be there
-API_KEY = ''
+API_KEY = '18de54a8e97441bbe3e787dfe7636e65'
 
 
 def get_apip_url(city):
